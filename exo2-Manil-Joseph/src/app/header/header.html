@@ -1,1 +1,9 @@
-<p>header works!</p>
+<header class="site-header">
+	<nav class="navbar" aria-label="Navigation principale">
+		<ul class="navbar__links">
+			<li><a routerLink="/" routerLinkActive="navbar__link--active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></li>
+			<li><a routerLink="/liste" routerLinkActive="navbar__link--active">Liste</a></li>
+			<li><a routerLink="/gestion" routerLinkActive="navbar__link--active">Gestion</a></li>
+		</ul>
+	</nav>
+</header>

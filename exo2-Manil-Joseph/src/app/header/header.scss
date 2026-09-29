@@ -1,0 +1,30 @@
+.site-header {
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.navbar__brand {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar__links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__links a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
