@@ -1,1 +1,25 @@
-<p>liste works!</p>
+<div class="container py-5 text-center">
+  <h2 class="fw-bold mb-4">Mes films préférés</h2>
+
+  <div class="list-group mx-auto liste">
+    @for (film of films; track film.titre) {
+      <a
+        class="list-group-item list-group-item-action"
+        role="button"
+        [class.active]="filmChoisi() === film"
+        (click)="choisir(film)"
+      >
+        {{ film.titre }}
+      </a>
+    }
+  </div>
+
+  @if (filmChoisi(); as film) {
+    <div class="card carte mx-auto mt-5 detail">
+      <img [src]="film.affiche" [alt]="film.titre" class="card-img-top" />
+      <div class="card-body">
+        <h3 class="card-title fw-bold">{{ film.titre }}</h3>
+      </div>
+    </div>
+  }
+</div>
