@@ -1,0 +1,8 @@
+.formulaire {
+  width: 100%;
+  max-width: 500px;
+}
+.form-control:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.2);
+}

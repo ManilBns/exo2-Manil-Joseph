@@ -1,1 +1,55 @@
-<p>contact works!</p>
+<div class="flex-grow-1 d-flex justify-content-center align-items-center py-5 px-3">
+  <div class="card carte p-4 formulaire">
+    <h2 class="fw-bold text-center mb-4">Contactez-nous</h2>
+
+    <form [formGroup]="form" (ngSubmit)="envoyer()">
+      <div class="mb-3">
+        <label class="form-label">Prénom</label>
+        <input type="text" class="form-control" formControlName="prenom" />
+        @if (form.controls.prenom.touched && form.controls.prenom.invalid) {
+          <small class="text-danger">Le prénom est requis.</small>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Nom</label>
+        <input type="text" class="form-control" formControlName="nom" />
+        @if (form.controls.nom.touched && form.controls.nom.invalid) {
+          <small class="text-danger">Le nom est requis.</small>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Âge</label>
+        <input type="number" class="form-control" formControlName="age" />
+      </div>
+
+      <div class="form-check form-switch mb-3">
+        <input type="checkbox" class="form-check-input" id="hide" formControlName="hide" />
+        <label class="form-check-label" for="hide">Hide (cacher l'email)</label>
+      </div>
+
+      @if (!emailCache()) {
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="text" class="form-control" formControlName="email" />
+          @if (form.controls.email.touched && form.controls.email.invalid) {
+            <small class="text-danger">Un email avec un @ est requis.</small>
+          }
+        </div>
+      }
+
+      <div class="mb-4">
+        <label class="form-label">Commentaire</label>
+        <textarea class="form-control" rows="4" formControlName="commentaire"></textarea>
+        @if (form.controls.commentaire.touched && form.controls.commentaire.invalid) {
+          <small class="text-danger">Le commentaire est requis.</small>
+        }
+      </div>
+
+      <button type="submit" class="btn btn-principal w-100 py-2" [disabled]="form.invalid">
+        Envoyer
+      </button>
+    </form>
+  </div>
+</div>

@@ -8,7 +8,7 @@ interface Film {
 @Component({
   selector: 'app-liste',
   templateUrl: './liste.html',
-  styleUrl: './liste.css',
+  styleUrl: './liste.scss',
 })
 export class Liste {
   // Remplace par tes 5 films et tes images
