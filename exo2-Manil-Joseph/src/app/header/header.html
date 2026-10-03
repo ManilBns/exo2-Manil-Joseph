@@ -1,9 +1,16 @@
-<header class="site-header">
-	<nav class="navbar" aria-label="Navigation principale">
-		<ul class="navbar__links">
-			<li><a routerLink="/" routerLinkActive="navbar__link--active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></li>
-			<li><a routerLink="/liste" routerLinkActive="navbar__link--active">Liste</a></li>
-			<li><a routerLink="/gestion" routerLinkActive="navbar__link--active">Gestion</a></li>
-		</ul>
-	</nav>
-</header>
+<nav class="navbar navbar-expand navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/">🎬 MonSite</a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/liste" routerLinkActive="active">Liste</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/gestion" routerLinkActive="active">Gestion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
