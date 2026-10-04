@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ContactService } from '../contact-service';
 
 @Component({
-  imports: [],
   selector: 'app-gestion',
-  styleUrl: './gestion.scss',
   templateUrl: './gestion.html',
+  styleUrl: './gestion.scss',
 })
-export class Gestion {}
+export class Gestion {
+  service = inject(ContactService);
+}

@@ -13,7 +13,7 @@ interface Film {
 export class Liste {
   // Remplace par tes 5 films et tes images
   films: Film[] = [
-    { titre: 'Inception', affiche: 'films/inception.jpg' },
+    { titre: '8 Mile', affiche: 'films/8-mile.jpg' },
     { titre: 'Interstellar', affiche: 'films/interstellar.jpg' },
     { titre: 'The Dark Knight', affiche: 'films/dark-knight.jpg' },
     { titre: 'Fight Club', affiche: 'films/fight-club.jpg' },

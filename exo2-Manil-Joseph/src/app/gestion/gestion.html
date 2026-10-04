@@ -1,1 +1,14 @@
-<p>gestion works!</p>
+<div class="flex-grow-1 d-flex justify-content-center align-items-center py-5 px-3">
+  @if (service.dernierFormulaire(); as f) {
+    <div class="card carte p-4 infos">
+      <h2 class="fw-bold text-center mb-4">Dernier formulaire</h2>
+      <p><strong>Prénom :</strong> {{ f.prenom }}</p>
+      <p><strong>Nom :</strong> {{ f.nom }}</p>
+      <p><strong>Âge :</strong> {{ f.age ?? 'Non renseigné' }}</p>
+      <p><strong>Email :</strong> {{ f.email || 'Non renseigné' }}</p>
+      <p class="mb-0"><strong>Commentaire :</strong> {{ f.commentaire }}</p>
+    </div>
+  } @else {
+    <h1 class="display-1 fw-bold text-secondary">404 Not Found</h1>
+  }
+</div>
