@@ -11,7 +11,7 @@ interface Film {
   styleUrl: './liste.scss',
 })
 export class Liste {
-  // Remplace par tes 5 films et tes images
+  // les films 
   films: Film[] = [
     { titre: '8 Mile', affiche: 'films/8-mile.jpg' },
     { titre: 'Interstellar', affiche: 'films/interstellar.jpg' },
