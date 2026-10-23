@@ -1,9 +1,5 @@
 import { Component, signal } from '@angular/core';
-
-interface Film {
-  titre: string;
-  affiche: string;
-}
+import { Film } from '../models/film';
 
 @Component({
   selector: 'app-liste',

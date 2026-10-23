@@ -22,7 +22,7 @@ export class Contact {
   form = this.fb.group({
     prenom: ['', Validators.required],
     nom: ['', Validators.required],
-    age: [null as number | null],
+    age: [null as number | null, [Validators.min(0), Validators.pattern(/^\d+$/)]],
     hide: [false],
     email: ['', this.emailValidators],
     commentaire: ['', Validators.required],
