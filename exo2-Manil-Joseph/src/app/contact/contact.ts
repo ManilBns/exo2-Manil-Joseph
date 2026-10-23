@@ -17,7 +17,7 @@ export class Contact {
   emailCache = signal(false);
 
   // Validation de l'email : requis + doit contenir un @
-  private emailValidators = [Validators.required, Validators.pattern('.*@.*')];
+  private emailValidators = [Validators.required , Validators.pattern('.*@.*')];
 
   form = this.fb.group({
     prenom: ['', Validators.required],
@@ -32,7 +32,7 @@ export class Contact {
     // Quand la checkbox Hide change
     this.form.controls.hide.valueChanges.subscribe((hide) => {
       const email = this.form.controls.email;
-      this.emailCache.set(!!hide);
+      this.emailCache.set(!!hide); //met à jour emailCache avec la valeur actuelle de hide.
 
       if (hide) {
         email.reset('');          // valeur réinitialisée
@@ -49,8 +49,8 @@ export class Contact {
 
     alert('Le formulaire est valide');
 
-    // On écrase le formulaire précédent
-    const v = this.form.getRawValue();
+    // On écrase le formulaire précédent avec set
+    const v = this.form.getRawValue(); // getRawValue() permet de récupérer les valeurs du formulaire et les mets dans v
     this.service.dernierFormulaire.set({
       prenom: v.prenom ?? '',
       nom: v.nom ?? '',
